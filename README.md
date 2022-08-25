@@ -3,7 +3,7 @@ v7
 
 # Instructions
 
-Download the most recent version of the `Modded_Origins.jar` file by clicking on it and then selecting download at the folowing page. This is the same file type that most mods are delivered in. I have no idea how you actually go about installing the mods, but you should be able to follow the same steps to install this file as any other mod that you install.
+Go to the `bin` and download the files there into your mod folder. You will still need to have Fabric API and Fabric Launcher in order to have this work. The size of the bat is variable and can be changed easily if you dislike the size. Let me know if you find any issues or have other features you want added.
 
 ## Progress
-Currently all functionality is working except for the sizing. Working on it
+All functionality should be working
