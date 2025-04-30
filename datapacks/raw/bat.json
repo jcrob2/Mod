@@ -1,0 +1,99 @@
+{
+    "meta": {
+        "name": "Bat Origin Pack",
+        "id": "bat_origin_pack",
+        "meta": "Bat Origin Pack",
+        "version": "1.0.0",
+        "pack_format": 15
+    },
+    "origin_layers/": {
+        "origins:origin": {
+            "origins": [
+                "0:bat"
+            ],
+            "enabled": true
+        }
+    },
+    "origins/": {
+        "bat": {
+            "name": "Bat",
+            "description": "Bats. What more could you ask for?",
+            "powers": [
+                "0:flight",
+                "0:vulnerable",
+                "0:nightvision"
+            ],
+            "icon": {
+                "item": "minecraft:apple"
+            },
+            "impact": 3
+        }
+    },
+    "powers/": {
+        "flight": {
+            "name": "Flight",
+            "description": "Grants Elytra flight. Press space to launch yourself upwards",
+            "type": "origins:multiple",
+            "elytra_flight": {
+                "type": "origins:elytra_flight",
+                "render_elytra": false
+            },
+            "flap_wings": {
+                "type": "origins:launch",
+                "cooldown": 20,
+                "speed": 1,
+                "hud_render": {
+                    "should_render": true,
+                    "sprite_location": "origins:textures/gui/resource_bar.png",
+                    "bar_index": 4
+                },
+                "sound": "minecraft:entity.bat.takeoff",
+                "key": {
+                    "key": "key.origins.primary_active"
+                }
+            }
+        },
+        "nightvision": {
+            "name": "Night Vision",
+            "description": "Bats use echolocation, but you can't. You're mostly a bat, but not quite. Have fun seeing in the dark instead",
+            "type": "origins:night_vision",
+            "strength": 0.2
+        },
+        "vulnerable": {
+            "name": "Small",
+            "description": "Bats are small and vulnerable (well, most of them...)",
+            "type": "origins:multiple",
+            "small": {
+                "type": "extraorigins:modify_size",
+                "scale": 0.5
+            },
+            "vulnerable": {
+                "type": "origins:attribute",
+                "modifier": {
+                    "attribute": "minecraft:generic.max_health",
+                    "operation": "multiply_base",
+                    "value": -0.5,
+                    "name": "Max health decrease"
+                },
+                "update_health": true
+            }
+        }
+    },
+    "tags/": {
+        "blocks/": {},
+        "entity_types/": {},
+        "fluids/": {},
+        "functions/": {},
+        "items/": {}
+    },
+    "functions/": {},
+    "predicates/": {},
+    "recipes/": {},
+    "loot_tables/": {},
+    "advancements/": {},
+    "item_modifiers/": {},
+    "assets/": {
+        "lang/": {},
+        "textures/": {}
+    }
+}
