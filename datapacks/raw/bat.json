@@ -21,10 +21,11 @@
             "powers": [
                 "0:flight",
                 "0:vulnerable",
-                "0:nightvision"
+                "0:nightvision",
+                "0:exhaustion"
             ],
             "icon": {
-                "item": "minecraft:apple"
+                "item": "minecraft:bat_spawn_egg"
             },
             "impact": 3
         }
@@ -98,6 +99,17 @@
                     "command": "scale reset @s"
                 }
             }
+        },
+        "exhaustion": {
+            "name": "Exhaustion",
+            "description": "Flying takes energy, especially when your're small!! Flying reduces your hunger at an increased rate.",
+            "condition": {
+                "type": "origins:power_active",
+                "power": "*:flight"
+            },
+            "type": "origins:exhaust",
+            "interval": 20,
+            "exhaustion": 0.812
         }
     },
     "tags/": {
