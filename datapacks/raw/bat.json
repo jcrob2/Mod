@@ -36,7 +36,7 @@
             "type": "origins:multiple",
             "elytra_flight": {
                 "type": "origins:elytra_flight",
-                "render_elytra": false
+                "render_elytra": true
             },
             "flap_wings": {
                 "type": "origins:launch",
@@ -61,12 +61,8 @@
         },
         "vulnerable": {
             "name": "Small",
-            "description": "Bats are small and vulnerable (well, most of them...)",
+            "description": "Bats are small and vulnerable (well, most of them...), as such you are 40% the size of a human and have half as much health.",
             "type": "origins:multiple",
-            "small": {
-                "type": "extraorigins:modify_size",
-                "scale": 0.5
-            },
             "vulnerable": {
                 "type": "origins:attribute",
                 "modifier": {
@@ -76,6 +72,31 @@
                     "name": "Max health decrease"
                 },
                 "update_health": true
+            },
+            "small": {
+                "type": "origins:action_on_callback",
+                "entity_action_chosen": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "scale set pehkui:height 0.4 @s"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "command": "scale set pehkui:width 0.4 @s"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "command": "scale persist set true @s"
+                        }
+                    ]
+                },
+                "execute_chosen_when_orb": true,
+                "entity_action_lost": {
+                    "type": "origins:execute_command",
+                    "command": "scale reset @s"
+                }
             }
         }
     },
