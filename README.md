@@ -7,7 +7,9 @@ This datapack is designed to be used in version `1.20.1`. Here's the list of fea
 - Player is able to utilize Elytra gliding even without an Elytra
 - Player is able to see in the dark to some degree
 - Player is able to "flap their wings" and be launched upwards 6ish blocks every 1.5 seconds(ish)
-- Player becomes exhausted faster when flying
+- Player cannot use shields
+- Player cannot use iron, diamond, or netherite armor
+- Player has 7 hearts instead of 10
 
 # FAQ
 
